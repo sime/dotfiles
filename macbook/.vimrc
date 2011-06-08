@@ -16,3 +16,9 @@ set hlsearch
 
 " Default colorscheme
 colorscheme elflord
+
+" Restore cursor to last known position
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
