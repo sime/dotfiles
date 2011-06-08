@@ -8,3 +8,5 @@ MACPORTS=/opt/local/bin:/opt/local/sbin
 MYSQL=/usr/local/mysql/bin
 export PATH=$MACPORTS:$MYSQL:$PATH
 
+export CLICOLOR=1
+
