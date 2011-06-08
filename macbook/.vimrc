@@ -5,8 +5,14 @@
 "set softtabstop=4
 
 if has("autocmd")
-autocmd BufEnter *.ctp set syn=php
+	autocmd BufEnter *.ctp set syn=php
 endif
 
-syn on
+" Syntax highlighting
+syntax on
+
+" Highlight search matches
+set hlsearch
+
+" Default colorscheme
 colorscheme elflord
