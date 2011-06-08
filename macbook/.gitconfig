@@ -1,0 +1,6 @@
+[user]
+	name = Simon Males
+[color]
+	ui = true
+[core]
+	editor = vim
