@@ -5,6 +5,9 @@ set tabstop=4
 "set smarttab
 "set softtabstop=4
 
+" Indent please!
+set autoindent
+
 if has("autocmd")
 	autocmd BufEnter *.ctp set syn=php
 endif
