@@ -8,9 +8,11 @@ set tabstop=4
 " Indent please!
 set autoindent
 
+" Modelines
+set modelines=1
+
 if has("autocmd")
 	autocmd BufEnter *.ctp set syn=php
-	au BufRead,BufNewFile /Users/sime/Development/server-configs/nginx/* set ft=nginx
 endif
 
 " Syntax highlighting
