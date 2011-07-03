@@ -11,6 +11,9 @@ set autoindent
 " Modelines
 set modelines=1
 
+" Ruler shows line and character position
+set ruler
+
 if has("autocmd")
 	autocmd BufEnter *.ctp set syn=php
 endif
