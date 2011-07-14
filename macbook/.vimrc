@@ -32,3 +32,8 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
+
+" Highlight whitespace
+" Source: http://www.carbon-project.org/Vim__How_to_prevent_trailing_whitespaces.html
+highlight TrailWhitespace ctermbg=red guibg=red
+match TrailWhitespace /\s\+$\| \+\ze\t/
