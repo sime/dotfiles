@@ -5,8 +5,9 @@ export PS1
 
 # Paths
 MACPORTS=/opt/local/bin:/opt/local/sbin
+GNU_COREUTILS=/opt/local/libexec/gnubin
 MYSQL=/usr/local/mysql/bin
-export PATH=$MACPORTS:$MYSQL:$PATH
+export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$PATH
 
 export CLICOLOR=1
 
