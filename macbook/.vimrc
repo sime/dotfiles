@@ -55,3 +55,5 @@ match TrailWhitespace /\s\+$\| \+\ze\t/
 "  endif
 "endfun
 "autocmd BufWritePre,FileWritePre * call <SID>MyDeleteTrailingWhitespace()
+
+set wildmode=longest,list:longest,list:full
