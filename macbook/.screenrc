@@ -3,3 +3,5 @@ escape ^Ff
 
 hardstatus alwayslastline
 hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"
+
+defscrollback 5000
