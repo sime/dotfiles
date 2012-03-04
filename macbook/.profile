@@ -8,7 +8,8 @@ MACPORTS=/opt/local/bin:/opt/local/sbin
 GNU_COREUTILS=/opt/local/libexec/gnubin
 MYSQL=/usr/local/mysql/bin
 HOME_BIN=$HOME/.local/bin
-export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PATH
+PEAR_BIN=/opt/local/lib/php/pear/bin
+export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$PATH
 
 export CLICOLOR=1
 
