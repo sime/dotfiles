@@ -27,6 +27,12 @@ set hlsearch
 " Default colorscheme
 colorscheme elflord
 
+" Allow pasting
+set paste
+
+" Set ruler
+set ruler
+
 " Restore cursor to last known position
 autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
