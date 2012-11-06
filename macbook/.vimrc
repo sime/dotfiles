@@ -1,9 +1,9 @@
 " Number of spaces that a <Tab> in the file counts for.
 set tabstop=4
 set shiftwidth=4
-"set expandtab
-"set smarttab
-"set softtabstop=4
+set expandtab
+set smarttab
+set softtabstop=4
 
 " Indent please!
 set autoindent
@@ -60,3 +60,8 @@ match TrailWhitespace /\s\+$\| \+\ze\t/
 "autocmd BufWritePre,FileWritePre * call <SID>MyDeleteTrailingWhitespace()
 
 set wildmode=longest,list:longest,list:full
+
+au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+
+set laststatus=2
+set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)?&fenc:&enc}]%=[%l,%L,\ %c]
