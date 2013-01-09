@@ -7,9 +7,10 @@ export PS1
 MACPORTS=/opt/local/bin:/opt/local/sbin
 GNU_COREUTILS=/opt/local/libexec/gnubin
 MYSQL=/usr/local/mysql/bin
+POSTGRES=/opt/local/lib/postgresql92/bin
 HOME_BIN=$HOME/.local/bin
 PEAR_BIN=/opt/local/lib/php/pear/bin
-export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$PATH
+export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$PATH
 
 export CLICOLOR=1
 
