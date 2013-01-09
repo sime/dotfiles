@@ -16,6 +16,7 @@ set ruler
 
 if has("autocmd")
 	autocmd BufEnter *.ctp set syn=php
+	autocmd BufEnter *.php.heroku set syn=php
 endif
 
 " Syntax highlighting
@@ -65,3 +66,7 @@ au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 set laststatus=2
 set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)?&fenc:&enc}]%=[%l,%L,\ %c]
+
+"Now all operations work with the OS clipboard
+" Source: https://twitter.com/vimtips/status/287242155771166720
+set clipboard=unnamed
