@@ -70,3 +70,9 @@ set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)
 "Now all operations work with the OS clipboard
 " Source: https://twitter.com/vimtips/status/287242155771166720
 set clipboard=unnamed
+
+" Source: https://github.com/laktek/distraction-free-writing-vim
+let g:fullscreen_colorscheme = "iawriter"
+let g:fullscreen_font = "Cousine:h14"
+let g:normal_colorscheme = "codeschool"
+let g:normal_font="Inconsolata:h14"
