@@ -10,7 +10,9 @@ MYSQL=/usr/local/mysql/bin
 POSTGRES=/opt/local/lib/postgresql92/bin
 HOME_BIN=$HOME/.local/bin
 PEAR_BIN=/opt/local/lib/php/pear/bin
-export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$PATH
+ANDROID=$HOME/Development/adt-bundle-mac-x86_64/sdk/platform-tools:$HOME/Development/adt-bundle-mac-x86_64/sdk/tools
+CORDOVA=$HOME/Development/android-cordova/bin
+export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$PATH
 
 export CLICOLOR=1
 
