@@ -1,6 +1,6 @@
 
 . /opt/local/share/doc/git-core/contrib/completion/git-completion.bash
-PS1="[\$(date +%k:%M:%S)] \u@macbook$(__git_ps1 " (%s)") \w\$ "
+PS1="[\$(date +%k:%M:%S)] \u@macbook\$(__git_ps1 \" (%s)\") \w\$ "
 export PS1
 
 # Paths
