@@ -15,10 +15,9 @@ PEAR_BIN=/opt/local/lib/php/pear/bin
 # sudo port install android
 ANDROID=/opt/local/share/java/android-sdk-macosx/platform-tools:/opt/local/share/java/android-sdk-macosx/tools
 CORDOVA=$HOME/Development/android-cordova/bin
-export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$PATH
+HEROKU=/usr/local/heroku/bin
+NODEJS=$HOME/node_modules/.bin
+export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$HEROKU:$NODEJS:$PATH
 
 export CLICOLOR=1
 
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
