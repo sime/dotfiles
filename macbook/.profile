@@ -12,7 +12,8 @@ MYSQL=/usr/local/mysql/bin
 POSTGRES=/opt/local/lib/postgresql92/bin
 HOME_BIN=$HOME/.local/bin
 PEAR_BIN=/opt/local/lib/php/pear/bin
-ANDROID=$HOME/Development/adt-bundle-mac-x86_64/sdk/platform-tools:$HOME/Development/adt-bundle-mac-x86_64/sdk/tools
+# sudo port install android
+ANDROID=/opt/local/share/java/android-sdk-macosx/platform-tools:/opt/local/share/java/android-sdk-macosx/tools
 CORDOVA=$HOME/Development/android-cordova/bin
 export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$PATH
 
