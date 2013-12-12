@@ -16,7 +16,7 @@ PEAR_BIN=/opt/local/lib/php/pear/bin
 ANDROID=/opt/local/share/java/android-sdk-macosx/platform-tools:/opt/local/share/java/android-sdk-macosx/tools
 CORDOVA=$HOME/Development/android-cordova/bin
 HEROKU=/usr/local/heroku/bin
-NODEJS=$HOME/node_modules/.bin
+NODEJS=$HOME/node_modules/.bin:$HOME/.npm-packages/bin
 export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$HEROKU:$NODEJS:$JAVA_HOME/bin:$PATH
 
