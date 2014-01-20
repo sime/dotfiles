@@ -1,9 +1,9 @@
 " Number of spaces that a <Tab> in the file counts for.
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
-set softtabstop=4
+set softtabstop=2
 
 " Indent please!
 set autoindent
@@ -76,3 +76,24 @@ let g:fullscreen_colorscheme = "iawriter"
 let g:fullscreen_font = "Cousine:h14"
 let g:normal_colorscheme = "codeschool"
 let g:normal_font="Inconsolata:h14"
+
+
+" Fortrabbit
+
+syntax on
+filetype indent on
+set autoindent
+set background=dark
+set backspace=indent,eol,start
+set encoding=utf-8
+set ignorecase
+set linebreak
+set list listchars=tab:⊳\ ,trail:⌑ ",eol:↲
+set nobackup
+set noswapfile
+set ruler
+set t_Co=256
+set visualbell t_vb=
+hi SpecialKey ctermfg=8
+
+filetype indent plugin on
