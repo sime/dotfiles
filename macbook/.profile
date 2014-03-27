@@ -23,3 +23,6 @@ export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDRO
 
 export CLICOLOR=1
 
+# Aliases
+alias be="bundle exec "
+
