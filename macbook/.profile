@@ -2,7 +2,7 @@
 # sudo port install git-core +bash_completion
 . /opt/local/share/git-core/git-prompt.sh
 
-PS1="[\$(date +%k:%M:%S)] \u@macbook\$(__git_ps1 \" (%s)\") \w\$ "
+PS1="[\$(date +%k:%M:%S)] \u@macbook\$(__git_ps1 \" (%s)\") \w\\n$ "
 export PS1
 
 # Paths
@@ -16,7 +16,7 @@ PEAR_BIN=/opt/local/lib/php/pear/bin
 ANDROID=/opt/local/share/java/android-sdk-macosx/platform-tools:/opt/local/share/java/android-sdk-macosx/tools
 CORDOVA=$HOME/Development/android-cordova/bin
 HEROKU=/usr/local/heroku/bin
-NODEJS=$HOME/node_modules/.bin:$HOME/.npm-packages/bin
+NODEJS=$HOME/node_modules/.bin:$HOME/.npm-packages/bin:./node_modules/.bin
 EDITOR=vim
 export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$HEROKU:$NODEJS:$JAVA_HOME/bin:$PATH
