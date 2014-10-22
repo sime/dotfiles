@@ -18,11 +18,12 @@ CORDOVA=$HOME/Development/android-cordova/bin
 HEROKU=/usr/local/heroku/bin
 NODEJS=$HOME/node_modules/.bin:$HOME/.npm-packages/bin:./node_modules/.bin
 EDITOR=vim
-export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
 export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$HEROKU:$NODEJS:$JAVA_HOME/bin:$PATH
 
 export CLICOLOR=1
 
 # Aliases
 alias be="bundle exec "
+alias corlog="adb logcat CordovaLog:D *:S"
 
