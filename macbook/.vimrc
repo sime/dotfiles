@@ -97,3 +97,6 @@ set visualbell t_vb=
 hi SpecialKey ctermfg=8
 
 filetype indent plugin on
+
+au BufNewFile *.js 0r ~/.vim/skeletons/js.skel
+
