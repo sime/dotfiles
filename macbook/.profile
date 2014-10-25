@@ -1,6 +1,6 @@
 
 # sudo port install git-core +bash_completion
-. /opt/local/share/git-core/git-prompt.sh
+. /opt/local/share/git/git-prompt.sh
 
 PS1="[\$(date +%k:%M:%S)] \u@macbook\$(__git_ps1 \" (%s)\") \w\\n$ "
 export PS1
