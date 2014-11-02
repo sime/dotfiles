@@ -2,7 +2,7 @@
 # sudo port install git-core +bash_completion
 . /opt/local/share/git/git-prompt.sh
 
-PS1="[\$(date +%k:%M:%S)] \u@macbook\$(__git_ps1 \" (%s)\") \w\\n$ "
+PS1="[\$(date +%k:%M:%S)] \u@macbook\$(__git_ps1 \" (%s)\") [\j] \w\\n$ "
 export PS1
 
 # Paths
@@ -22,6 +22,9 @@ export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$HEROKU:$NODEJS:$JAVA_HOME/bin:$PATH
 
 export CLICOLOR=1
+
+DYLD_LIBRARY_PATH=/usr/local/mysql-5.6.10-osx10.7-x86_64/lib
+export DYLD_LIBRARY_PATH
 
 # Aliases
 alias be="bundle exec "
