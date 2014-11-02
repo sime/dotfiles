@@ -25,6 +25,13 @@ syntax on
 " Highlight search matches
 set hlsearch
 
+" Highlights as you type an expression
+set incsearch
+
+" ignorecase plus smartcase make searches case-insensitive except when you include upper-case characters (so /foo matches FOO and fOo, but /FOO only matches the former)
+set ignorecase
+set smartcase
+
 " Default colorscheme
 colorscheme elflord
 
@@ -99,4 +106,6 @@ hi SpecialKey ctermfg=8
 filetype indent plugin on
 
 au BufNewFile *.js 0r ~/.vim/skeletons/js.skel
+
+nmap \l :setlocal number!<CR>
 
