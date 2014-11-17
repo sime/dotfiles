@@ -29,4 +29,5 @@ export DYLD_LIBRARY_PATH
 # Aliases
 alias be="bundle exec "
 alias corlog="adb logcat CordovaLog:D *:S"
+alias ssl="openssl s_client -connect "
 
