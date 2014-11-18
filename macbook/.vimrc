@@ -69,7 +69,7 @@ match TrailWhitespace /\s\+$\| \+\ze\t/
 
 set wildmode=longest,list:longest,list:full
 
-au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+" au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 set laststatus=2
 set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)?&fenc:&enc}]%=[%l,%L,\ %c]
@@ -108,4 +108,9 @@ filetype indent plugin on
 au BufNewFile *.js 0r ~/.vim/skeletons/js.skel
 
 nmap \l :setlocal number!<CR>
+
+au BufRead,BufNewFile *.jspx set filetype=xml
+au BufRead,BufNewFile *.tagx set filetype=xml
+
+au BufRead,BufNewFile *.less set filetype=less
 
