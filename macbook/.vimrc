@@ -114,3 +114,7 @@ au BufRead,BufNewFile *.tagx set filetype=xml
 
 au BufRead,BufNewFile *.less set filetype=less
 
+augroup ProjectSetup
+  au BufRead,BufEnter /Users/sime/dev/* set et sw=4 sts=4 cindent cinoptions=...
+augroup END
+

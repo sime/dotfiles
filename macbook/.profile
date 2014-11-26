@@ -32,3 +32,11 @@ alias be="bundle exec "
 alias corlog="adb logcat CordovaLog:D *:S"
 alias ssl="openssl s_client -connect "
 
+# 9Cookies
+ICASH_WEBAPP_PATH=$HOME/dev/icash-webapp
+TOMCAT_PATH=$HOME/dev/tomcat7
+alias buildapp="pushd .; cd $ICASH_WEBAPP_PATH; mvn -Pdevelopment -pl manager-webapp -am com.9cookies:tomcat-maven-plugin:generate-context; popd"
+alias contextmv="mv $ICASH_WEBAPP_PATH/manager-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/manager.xml"
+alias tomcat="$TOMCAT_PATH/bin/catalina.sh run"
+alias run9c="buildapp && contextmv && tomcat"
+
