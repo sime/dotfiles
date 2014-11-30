@@ -1,3 +1,7 @@
+# bash-completion
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
+fi
 
 # sudo port install git-core +bash_completion
 . /opt/local/share/git/git-prompt.sh
@@ -39,4 +43,7 @@ alias buildapp="pushd .; cd $ICASH_WEBAPP_PATH; mvn -Pdevelopment -pl manager-we
 alias contextmv="mv $ICASH_WEBAPP_PATH/manager-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/manager.xml"
 alias tomcat="$TOMCAT_PATH/bin/catalina.sh run"
 alias run9c="buildapp && contextmv && tomcat"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
