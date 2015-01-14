@@ -116,5 +116,6 @@ au BufRead,BufNewFile *.less set filetype=less
 
 augroup ProjectSetup
   au BufRead,BufEnter /Users/sime/dev/* set et sw=4 sts=4 cindent cinoptions=...
+  au BufRead,BufEnter /Users/sime/dev/*.less set et sw=2 sts=2 cindent cinoptions=...
 augroup END
 

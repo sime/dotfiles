@@ -3,7 +3,7 @@ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
     . /opt/local/etc/profile.d/bash_completion.sh
 fi
 
-# sudo port install git-core +bash_completion
+# sudo port install git +bash_completion
 . /opt/local/share/git/git-prompt.sh
 
 PS1="[\$(date +%k:%M:%S)] \u@macbook\$(__git_ps1 \" (%s)\") [\j] \w\\n$ "
@@ -20,7 +20,7 @@ PEAR_BIN=/opt/local/lib/php/pear/bin
 ANDROID=/opt/local/share/java/android-sdk-macosx/platform-tools:/opt/local/share/java/android-sdk-macosx/tools
 CORDOVA=$HOME/Development/android-cordova/bin
 HEROKU=/usr/local/heroku/bin
-NODEJS=$HOME/node_modules/.bin:$HOME/.npm-packages/bin:./node_modules/.bin
+NODEJS=$HOME/.npm-packages/bin:./node_modules/.bin
 EDITOR=vim
 # Only works after installing JDK 7
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
@@ -31,15 +31,19 @@ export CLICOLOR=1
 DYLD_LIBRARY_PATH=/usr/local/mysql-5.6.10-osx10.7-x86_64/lib
 export DYLD_LIBRARY_PATH
 
+export GREP_OPTIONS="--color=auto"
+
 # Aliases
 alias be="bundle exec "
 alias corlog="adb logcat CordovaLog:D *:S"
 alias ssl="openssl s_client -connect "
 
 # 9Cookies
+# Run this on first install: cd maven-plugins/tomcat-maven-plugin; mvn install; cd ../..
 ICASH_WEBAPP_PATH=$HOME/dev/icash-webapp
 TOMCAT_PATH=$HOME/dev/tomcat7
 alias buildapp="pushd .; cd $ICASH_WEBAPP_PATH; mvn -Pdevelopment -pl manager-webapp -am com.9cookies:tomcat-maven-plugin:generate-context; popd"
+#alias buildapp="pushd .; cd $ICASH_WEBAPP_PATH; mvn -Pdevelopment -pl driver-webapp -am com.9cookies:tomcat-maven-plugin:generate-context; popd"
 alias contextmv="mv $ICASH_WEBAPP_PATH/manager-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/manager.xml"
 alias tomcat="$TOMCAT_PATH/bin/catalina.sh run"
 alias run9c="buildapp && contextmv && tomcat"
