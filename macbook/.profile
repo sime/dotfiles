@@ -28,7 +28,7 @@ export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDRO
 
 export CLICOLOR=1
 
-DYLD_LIBRARY_PATH=/usr/local/mysql-5.6.10-osx10.7-x86_64/lib
+DYLD_LIBRARY_PATH=/usr/local/mysql/lib
 export DYLD_LIBRARY_PATH
 
 export GREP_OPTIONS="--color=auto"
@@ -42,11 +42,12 @@ alias ssl="openssl s_client -connect "
 # Run this on first install: cd maven-plugins/tomcat-maven-plugin; mvn install; cd ../..
 ICASH_WEBAPP_PATH=$HOME/dev/icash-webapp
 TOMCAT_PATH=$HOME/dev/tomcat7
-alias buildapp="pushd .; cd $ICASH_WEBAPP_PATH; mvn -Pdevelopment -pl manager-webapp -am com.9cookies:tomcat-maven-plugin:generate-context; popd"
-#alias buildapp="pushd .; cd $ICASH_WEBAPP_PATH; mvn -Pdevelopment -pl driver-webapp -am com.9cookies:tomcat-maven-plugin:generate-context; popd"
-alias contextmv="mv $ICASH_WEBAPP_PATH/manager-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/manager.xml"
+alias buildapp="pushd .; cd $ICASH_WEBAPP_PATH; mvn -Pdevelopment -pl manager-webapp,driver-webapp,icash-webapp -am com.9cookies:tomcat-maven-plugin:generate-context; popd"
+alias contextmanager="mv $ICASH_WEBAPP_PATH/manager-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/manager.xml"
+alias contextdriver="mv $ICASH_WEBAPP_PATH/driver-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/driver.xml"
+alias contexticash="mv $ICASH_WEBAPP_PATH/icash-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/icash.xml"
 alias tomcat="$TOMCAT_PATH/bin/catalina.sh run"
-alias run9c="buildapp && contextmv && tomcat"
+alias run9c="buildapp && contextmanager && contextdriver && contexticash && tomcat"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
