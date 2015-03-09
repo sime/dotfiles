@@ -119,3 +119,25 @@ augroup ProjectSetup
   au BufRead,BufEnter /Users/sime/dev/*.less set et sw=2 sts=2 cindent cinoptions=...
 augroup END
 
+augroup CI
+  au BufRead,BufEnter /Users/sime/dev/icash-ci/* set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab cindent cinoptions=...
+augroup END
+
+execute pathogen#infect()
+
+" Syntastic recommendation
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['jscs', 'jshint']
+let g:syntastic_json_checkers = []
+let g:syntastic_less_checkers = []
+let g:syntastic_html_checkers = []
+
+
