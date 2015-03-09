@@ -37,6 +37,7 @@ export GREP_OPTIONS="--color=auto"
 alias be="bundle exec "
 alias corlog="adb logcat CordovaLog:D *:S"
 alias ssl="openssl s_client -connect "
+alias blowfish="rsync -Pav -e 'ssh -c blowfish' $1"
 
 # 9Cookies
 # Run this on first install: cd maven-plugins/tomcat-maven-plugin; mvn install; cd ../..
