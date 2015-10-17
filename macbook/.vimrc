@@ -114,13 +114,15 @@ au BufRead,BufNewFile *.tagx set filetype=xml
 
 au BufRead,BufNewFile *.less set filetype=less
 
+au BufRead,BufNewFile *.json set filetype=json
+
 augroup ProjectSetup
   au BufRead,BufEnter /Users/sime/dev/* set et sw=4 sts=4 cindent cinoptions=...
   au BufRead,BufEnter /Users/sime/dev/*.less set et sw=2 sts=2 cindent cinoptions=...
 augroup END
 
 augroup CI
-  au BufRead,BufEnter /Users/sime/dev/icash-ci/* set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab cindent cinoptions=...
+  au BufRead,BufEnter /Users/sime/dev/icash-ci/*.rb set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab cindent cinoptions=...
 augroup END
 
 execute pathogen#infect()
@@ -135,9 +137,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_javascript_checkers = ['jscs', 'jshint']
+let g:syntastic_javascript_checkers = ['jscs', 'jshint', 'jslint']
 let g:syntastic_json_checkers = []
 let g:syntastic_less_checkers = []
 let g:syntastic_html_checkers = []
+let g:syntastic_scss_checkers = []
 
 
