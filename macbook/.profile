@@ -32,23 +32,15 @@ DYLD_LIBRARY_PATH=/usr/local/mysql/lib
 export DYLD_LIBRARY_PATH
 
 export GREP_OPTIONS="--color=auto"
+export LESS="-R"
 
 # Aliases
 alias be="bundle exec "
 alias corlog="adb logcat CordovaLog:D *:S"
 alias ssl="openssl s_client -connect "
-alias blowfish="rsync -Pav -e 'ssh -c blowfish' $1"
-
-# 9Cookies
-# Run this on first install: cd maven-plugins/tomcat-maven-plugin; mvn install; cd ../..
-ICASH_WEBAPP_PATH=$HOME/dev/icash-webapp
-TOMCAT_PATH=$HOME/dev/tomcat7
-alias buildapp="pushd .; cd $ICASH_WEBAPP_PATH; mvn -Pdevelopment -pl manager-webapp,driver-webapp,icash-webapp -am com.9cookies:tomcat-maven-plugin:generate-context; popd"
-alias contextmanager="mv $ICASH_WEBAPP_PATH/manager-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/manager.xml"
-alias contextdriver="mv $ICASH_WEBAPP_PATH/driver-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/driver.xml"
-alias contexticash="mv $ICASH_WEBAPP_PATH/icash-webapp/target/context.xml $TOMCAT_PATH/conf/Catalina/localhost/icash.xml"
-alias tomcat="$TOMCAT_PATH/bin/catalina.sh run"
-alias run9c="buildapp && contextmanager && contextdriver && contexticash && tomcat"
+alias blowsync="rsync -Pav -e 'ssh -c blowfish' $1"
+alias rp="ssh -R 3001:localhost:3000 $1"
+alias updatebg="unsplash desktop --random"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
