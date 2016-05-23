@@ -22,13 +22,14 @@ CORDOVA=$HOME/Development/android-cordova/bin
 HEROKU=/usr/local/heroku/bin
 NODEJS=$HOME/.npm-packages/bin:./node_modules/.bin
 EDITOR=vim
+LIBIMOBILEDEVICE=/Users/sime/Downloads/libimobiledevice-macosx/
 # Only works after installing JDK 7
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$HEROKU:$NODEJS:$JAVA_HOME/bin:$PATH
+export PATH=$MACPORTS:$GNU_COREUTILS:$MYSQL:$HOME_BIN:$PEAR_BIN:$POSTGRES:$ANDROID:$CORDOVA:$HEROKU:$NODEJS:$JAVA_HOME/bin:$LIBIMOBILEDEVICE:$PATH
 
 export CLICOLOR=1
 
-DYLD_LIBRARY_PATH=/usr/local/mysql/lib
+DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$LIBIMOBILEDEVICE
 export DYLD_LIBRARY_PATH
 
 export GREP_OPTIONS="--color=auto"
@@ -38,9 +39,11 @@ export LESS="-R"
 alias be="bundle exec "
 alias corlog="adb logcat CordovaLog:D *:S"
 alias ssl="openssl s_client -connect "
-alias blowsync="rsync -Pav -e 'ssh -c blowfish' $1"
+alias blowsync="rsync -Pav --stats -e 'ssh -c arcfour256' $1"
+alias tvsync="rsync -Prltzuv --stats --rsync-path=/storage/.kodi/addons/network.backup.rsync/bin/rsync $1"
 alias rp="ssh -R 3001:localhost:3000 $1"
 alias updatebg="unsplash desktop --random"
+alias cleanvim="vim -u ~/.clean.vimrc --noplugin"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
