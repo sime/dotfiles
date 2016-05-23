@@ -138,9 +138,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['jscs', 'jshint', 'jslint']
-let g:syntastic_json_checkers = []
+let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_less_checkers = []
 let g:syntastic_html_checkers = []
 let g:syntastic_scss_checkers = []
 
-
+set cm=blowfish
